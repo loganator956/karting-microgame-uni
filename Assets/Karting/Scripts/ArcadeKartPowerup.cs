@@ -33,7 +33,6 @@ public class ArcadeKartPowerup : MonoBehaviour {
                 isCoolingDown = false;
                 onPowerupFinishCooldown.Invoke();
             }
-
         }
     }
 
