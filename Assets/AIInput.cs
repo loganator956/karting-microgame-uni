@@ -29,7 +29,7 @@ public class AIInput : KartGame.KartSystems.BaseInput
         Vector3 forwards = transform.forward;
         forwards.y = 0;
 
-        if (Vector3.Distance(targets[currentIndex].transform.position, transform.position) < 3.5f)
+        if (Vector3.Distance(targets[currentIndex].transform.position, transform.position) < 5f)
         {
             currentIndex++;
             if (currentIndex >= targets.Count)
