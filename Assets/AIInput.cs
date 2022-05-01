@@ -29,7 +29,7 @@ public class AIInput : KartGame.KartSystems.BaseInput
         Vector3 forwards = transform.forward;
         forwards.y = 0;
 
-        if (Vector3.Dot(forwards, targetDelta) < 0)
+        if (Vector3.Distance(targets[currentIndex].transform.position, transform.position) < 3.5f)
         {
             currentIndex++;
             if (currentIndex >= targets.Count)
@@ -37,9 +37,10 @@ public class AIInput : KartGame.KartSystems.BaseInput
                 currentIndex = 0;
             }
         }
-        float angle = Vector3.SignedAngle(transform.position, targets[currentIndex].transform.position, Vector3.up);
+        float angle = Vector3.SignedAngle(forwards, targetDelta, Vector3.up);
+        print(angle);
         Steer = Mathf.Clamp(angle, -1f, 1f);
-        print(Steer);
+        // print(Steer);
         Accelerate = true;
     }
 
