@@ -24,10 +24,28 @@ public class TimelinePlayer : MonoBehaviour
     }
 
     int currentIndex = 0;
+    int slowDownTimer = 0;
+
+    public int SlowDownLengthCounter = 0;
 
     void FixedUpdate()
     {
-        currentIndex++;
+        if (SlowDownLengthCounter > 0)
+        {
+            if (slowDownTimer == 0)
+            {
+                slowDownTimer = 1;
+            }
+            else
+            {
+                slowDownTimer--;
+                currentIndex++;
+            }
+        }
+        else
+        {
+            currentIndex++;
+        }
         switch (recording)
         {
             case "A":
