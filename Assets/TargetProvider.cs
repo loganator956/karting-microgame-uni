@@ -37,7 +37,7 @@ public class TargetProvider : MonoBehaviour
 
     private void RecursePathRandom(Target t, List<Vector3> list)
     {
-        list.Add(t.GetPosition());
+        list.Add(t.GetPosition() + new Vector3(Random.Range(-2f, 2f), Random.Range(-1f, 1f), Random.Range(-2f, 2f)));
         if (t.NextTargets.Length == 0) { return; };
         int index = Random.Range(0, t.NextTargets.Length);
         RecursePathRandom(t.NextTargets[index], list);
