@@ -852,6 +852,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI Kart (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4135897212918433670, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135897213567261723, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051dfcb488da249438d4338dc9234ec6, type: 3}
 --- !u!1001 &42482736
@@ -8671,6 +8681,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI Kart (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4135897212918433670, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135897213567261723, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051dfcb488da249438d4338dc9234ec6, type: 3}
 --- !u!4 &483190912 stripped
@@ -9016,6 +9036,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AI Kart (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135897212918433670, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135897213567261723, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051dfcb488da249438d4338dc9234ec6, type: 3}
@@ -18851,6 +18881,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI Kart
       objectReference: {fileID: 0}
+    - target: {fileID: 4135897212918433670, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135897213567261723, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051dfcb488da249438d4338dc9234ec6, type: 3}
 --- !u!1001 &1097663050
@@ -20303,6 +20343,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AI Kart (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135897212918433670, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135897213567261723, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051dfcb488da249438d4338dc9234ec6, type: 3}
@@ -24451,7 +24501,7 @@ PrefabInstance:
     - target: {fileID: 3368944771209025263, guid: 9982527ae59625f4db19031743e8e79d,
         type: 3}
       propertyPath: lapsToComplete
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9982527ae59625f4db19031743e8e79d, type: 3}
@@ -35619,6 +35669,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AI Kart Original
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135897212918433670, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135897213567261723, guid: 051dfcb488da249438d4338dc9234ec6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 051dfcb488da249438d4338dc9234ec6, type: 3}
