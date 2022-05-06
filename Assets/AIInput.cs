@@ -24,6 +24,34 @@ public class AIInput : KartGame.KartSystems.BaseInput
 
     Vector3 _targetDelta;
 
+    private bool _isOOB = false;
+    public bool IsOOB
+    {
+        get { return _isOOB; }
+        set
+        {
+            if (value != _isOOB)
+            {
+                // value is different
+                _isOOB = value;
+                if (value)
+                {
+                    // become out of bounds juts now
+                    Debug.Log("OUt of bounds");
+                }
+            }
+        }
+    }
+
+    float stuckTimer = 0f;
+    Vector3 lastPosition;
+    Rigidbody rb;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     void Update()
     {
         Vector3 targetDelta = (targets[currentIndex].transform.position - transform.position).normalized;
@@ -34,6 +62,7 @@ public class AIInput : KartGame.KartSystems.BaseInput
 
         if (Vector3.Distance(targets[currentIndex].transform.position, transform.position) < 5f)
         {
+            lastPosition = targets[currentIndex].transform.position;
             currentIndex++;
             if (currentIndex >= targets.Count)
             {
@@ -43,8 +72,28 @@ public class AIInput : KartGame.KartSystems.BaseInput
         float angle = Vector3.SignedAngle(forwards, targetDelta, Vector3.up);
         Steer = angle / 30f;
         Steer = Mathf.Clamp(Steer, -1f, 1f);
-        print(Steer);
         Accelerate = true;
+        if (rb.velocity.magnitude < 0.5f)
+        {
+            StuckTimer += Time.deltaTime;
+            if (StuckTimer > 6f)
+            {
+                transform.position = lastPosition + Vector3.up;
+                StuckTimer = 0f;
+            }
+        }
+    }
+
+    public float StuckTimer = 0f;
+
+    void OnCollisionEnter(Collision collision)
+    {
+
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+
     }
 
     void OnDrawGizmos()
