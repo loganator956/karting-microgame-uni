@@ -19,7 +19,7 @@ public class Boost : MonoBehaviour
     }
     public float BoostReduceRate = 0.2f;
     public AnimationCurve BoostCurve;
-    public float TopSpeedMultiplier = 2f, AccelerationMultiplier = 3f;
+    public float TopSpeedMultiplier = 1.8f, AccelerationMultiplier = 3f;
 
     private ArcadeKart _kart;
 
