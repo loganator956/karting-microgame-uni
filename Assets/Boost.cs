@@ -44,7 +44,6 @@ public class Boost : MonoBehaviour
         if (BoostCountDown > 0)
         {
             BoostCountDown -= Time.deltaTime * BoostReduceRate;
-            // _kartOriginalAcceleration + (_kartOriginalAcceleration * AccelerationMultiplier * BoostCurve.Evaluate(BoostCountDown));
             _kart.baseStats.Acceleration = Mathf.Max(_kartOriginalAcceleration, _kartOriginalAcceleration * AccelerationMultiplier * BoostCurve.Evaluate(BoostCountDown));
             _kart.baseStats.TopSpeed = _kartOriginalTopSpeed + (_kartOriginalTopSpeed * TopSpeedMultiplier * BoostCurve.Evaluate(BoostCountDown));
         }
