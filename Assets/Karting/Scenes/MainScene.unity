@@ -9969,6 +9969,9 @@ MonoBehaviour:
   ammo: 0
   isPlayer: 1
   line: {fileID: 1890208828094905711, guid: 8df8f7bcf5165b64f97f82ad28623188, type: 3}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!1001 &568998999
 PrefabInstance:
   m_ObjectHideFlags: 0

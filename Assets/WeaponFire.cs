@@ -37,17 +37,19 @@ public class WeaponFire : MonoBehaviour
                 DisableWeapon();
             }
             RaycastHit rayHit;
-            if (Physics.Raycast(transform.position + transform.forward, transform.forward, out rayHit, 30f))
+            if (Physics.Raycast(transform.position + transform.forward, transform.forward, out rayHit, 30f, layerMask))
             {
-                Instantiate(line, Vector3.zero, Quaternion.identity);
-                LineRenderer lineRenderer = line.GetComponent<LineRenderer>();
-                lineRenderer.SetPositions(new Vector3[] { transform.position, rayHit.point });
+                // Instantiate(line, Vector3.zero, Quaternion.identity);
+                // LineRenderer lineRenderer = line.GetComponent<LineRenderer>();
+                // lineRenderer.SetPositions(new Vector3[] { transform.position, rayHit.point });
                 if (!rayHit.collider.attachedRigidbody) { return; };
-                Collider[] colliders = Physics.OverlapSphere(rayHit.point, 3f);
-                foreach (Collider col in colliders)
-                {
-                    col.attachedRigidbody.AddExplosionForce(2000f, rayHit.point, 4f);
-                }
+                // Destroy(rayHit.collider.attachedRigidbody.gameObject);
+                rayHit.collider.attachedRigidbody.gameObject.GetComponent<AgentDisabler>().Disable();
+                // Collider[] colliders = Physics.OverlapSphere(rayHit.point, 3f);
+                // foreach (Collider col in colliders)
+                // {
+                    
+                // }
 
                 Debug.Log(rayHit.transform.name);
                 // Enemy timeliner = rayHit.collider.attachedRigidbody.gameObject.GetComponent<Enemy>();
@@ -60,6 +62,8 @@ public class WeaponFire : MonoBehaviour
         }
     }
     public GameObject line;
+
+    public LayerMask layerMask;
 
     public void EnableWeapon()
     {
