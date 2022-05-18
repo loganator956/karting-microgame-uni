@@ -9,14 +9,14 @@ public class GunPickup : MonoBehaviour
     {
         Rigidbody rb = other.attachedRigidbody;
         Debug.Log("Trigger enter");
-        if (rb)
+        if (rb) // check if rigidbody exists (not null)
         {
             Debug.Log("Rigidbody");
-            WeaponFire weapon = rb.GetComponentInChildren<WeaponFire>();
+            WeaponFire weapon = rb.GetComponentInChildren<WeaponFire>(); // attempt to get WeaponFire object
             if (weapon)
             {
                 Debug.Log("Has weapon");
-                weapon.EnableWeapon();
+                weapon.EnableWeapon(); // enable weapon if exists
             }
         }
     }
